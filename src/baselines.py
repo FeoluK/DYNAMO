@@ -1,7 +1,10 @@
 # src/baselines.py
 import numpy as np
 import pandas as pd
-from .utils import equity_curve, summarize
+try:
+    from .utils import equity_curve, summarize
+except ImportError:
+    from utils import equity_curve, summarize
 
 STOCKS = ["SPY","XLK"]
 BONDS  = ["TLT"]
